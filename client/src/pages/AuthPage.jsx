@@ -15,6 +15,7 @@ export const AuthPage = () => {
                   id="email"
                   type="text"
                   name="email"
+                  className="yellow-input"
                 />
                 <label for="email">Email</label>
               </div>
@@ -24,6 +25,7 @@ export const AuthPage = () => {
                   id="password"
                   type="password"
                   name="password"
+                  className="yellow-input"
                 />
                 <label for="password">Password</label>
               </div>
