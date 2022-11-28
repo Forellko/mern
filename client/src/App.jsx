@@ -5,7 +5,7 @@ import { useRoutes } from './routes';
 function App() {
   const isAuth = false;
 
-  const routes = useRoutes(!isAuth);
+  const routes = useRoutes(isAuth);
 
   return (
     <BrowserRouter>
