@@ -5,10 +5,14 @@ export const useHttp = () => {
   const [error, setError] = useState(null);
 
   const request = useCallback(
-    async (url, method = 'GET', body = 'null', headers = {}) => {
+    async (url, method = 'GET', body = {}, headers = {}) => {
       setLoading(true);
       try {
-        const response = await fetch(url, { method, body, headers });
+        const response = await fetch(url, {
+          method,
+          body: JSON.stringify(body),
+          headers,
+        });
         const data = await response.json();
 
         if (!response.ok) throw Error('Something wrong');
